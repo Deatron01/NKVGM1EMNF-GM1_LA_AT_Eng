@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.4.0">
+  <diagram name="Medical LoRA Pipeline" id="w2YXG9XDv9ogpFZKXZjW">
+    <mxGraphModel dx="1783" dy="981" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a7ckCafZYfiuoeeKoHxF-63" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Google Drive&#xa;(Orvosi képek + .txt címkék)" vertex="1">
+          <mxGeometry height="70" width="240" x="140" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="a7ckCafZYfiuoeeKoHxF-64" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Google Colab Tanítás&#xa;(Kohya_ss LoRA folyamat)" vertex="1">
+          <mxGeometry height="70" width="240" x="140" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="a7ckCafZYfiuoeeKoHxF-65" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Alapmodell&#xa;(Stable Diffusion 1.5 / SDXL)" vertex="1">
+          <mxGeometry height="70" width="240" x="460" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="a7ckCafZYfiuoeeKoHxF-66" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Betanított LoRA Modell&#xa;(.safetensors fájl)" vertex="1">
+          <mxGeometry height="70" width="240" x="140" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="a7ckCafZYfiuoeeKoHxF-67" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Google Colab Generálás&#xa;(ComfyUI / WebUI felület)" vertex="1">
+          <mxGeometry height="70" width="240" x="140" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="a7ckCafZYfiuoeeKoHxF-68" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Felhasználó&#xa;(Szöveges prompt pl: &#39;CT scan&#39;)" vertex="1">
+          <mxGeometry height="70" width="240" x="460" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="a7ckCafZYfiuoeeKoHxF-69" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Kész Szintetikus Kép&#xa;(Új, egyedi CT vagy Biopszia)" vertex="1">
+          <mxGeometry height="70" width="240" x="140" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="a7ckCafZYfiuoeeKoHxF-70" edge="1" parent="1" source="a7ckCafZYfiuoeeKoHxF-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="a7ckCafZYfiuoeeKoHxF-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7ckCafZYfiuoeeKoHxF-71" edge="1" parent="1" source="a7ckCafZYfiuoeeKoHxF-65" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" target="a7ckCafZYfiuoeeKoHxF-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7ckCafZYfiuoeeKoHxF-72" edge="1" parent="1" source="a7ckCafZYfiuoeeKoHxF-64" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" target="a7ckCafZYfiuoeeKoHxF-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7ckCafZYfiuoeeKoHxF-73" edge="1" parent="1" source="a7ckCafZYfiuoeeKoHxF-66" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" target="a7ckCafZYfiuoeeKoHxF-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7ckCafZYfiuoeeKoHxF-74" edge="1" parent="1" source="a7ckCafZYfiuoeeKoHxF-68" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" target="a7ckCafZYfiuoeeKoHxF-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7ckCafZYfiuoeeKoHxF-75" edge="1" parent="1" source="a7ckCafZYfiuoeeKoHxF-67" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" target="a7ckCafZYfiuoeeKoHxF-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7ckCafZYfiuoeeKoHxF-76" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;p data-path-to-node=&quot;8&quot;&gt;&lt;b data-path-to-node=&quot;8&quot; data-index-in-node=&quot;0&quot;&gt;1. A Projekt Célja (Vízió)&lt;/b&gt;&lt;br&gt;Olyan felhőalapú (Google Colab) mesterséges intelligencia munkafolyamat kialakítása, amely képes magas minőségű, anatómiatilag és strukturálisan koherens szintetikus orvosi képeket (pl. CT felvételek, szövettani biopsziák) generálni szöveges utasítások (promptok) alapján, egy előre betanított kiegészítő modell (LoRA) segítségével.&lt;/p&gt;&lt;p data-path-to-node=&quot;9&quot;&gt;&lt;b data-path-to-node=&quot;9&quot; data-index-in-node=&quot;0&quot;&gt;2. Funkcionális Követelmények&lt;/b&gt;&lt;/p&gt;&lt;ul data-path-to-node=&quot;10&quot;&gt;&lt;li&gt;&lt;p data-path-to-node=&quot;10,0,0&quot;&gt;&lt;b data-path-to-node=&quot;10,0,0&quot; data-index-in-node=&quot;0&quot;&gt;Adat-előkészítés:&lt;/b&gt; A rendszernek képesnek kell lennie a Google Drive-ról beolvasni az előre feltöltött képeket és a hozzájuk tartozó &lt;code data-path-to-node=&quot;10,0,0&quot; data-index-in-node=&quot;132&quot;&gt;.txt&lt;/code&gt; formátumú címkéket.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p data-path-to-node=&quot;10,1,0&quot;&gt;&lt;b data-path-to-node=&quot;10,1,0&quot; data-index-in-node=&quot;0&quot;&gt;Modell betanítás (Training):&lt;/b&gt; A rendszernek képesnek kell lennie a Stable Diffusion alapmodellen egy LoRA (Low-Rank Adaptation) finomhangolást végrehajtani a biztosított adatbázis alapján.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p data-path-to-node=&quot;10,2,0&quot;&gt;&lt;b data-path-to-node=&quot;10,2,0&quot; data-index-in-node=&quot;0&quot;&gt;Képgenerálás (Inference):&lt;/b&gt; A rendszernek webes felületet (Gradio vagy ComfyUI) kell biztosítania, ahol a felhasználó szöveges promptok alapján új képeket generálhat.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p data-path-to-node=&quot;10,3,0&quot;&gt;&lt;b data-path-to-node=&quot;10,3,0&quot; data-index-in-node=&quot;0&quot;&gt;Paraméterezhetőség:&lt;/b&gt; A felhasználónak képesnek kell lennie módosítani a generálás paramétereit (felbontás, lépésszám/Steps, CFG scale, LoRA erősség).&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p data-path-to-node=&quot;11&quot;&gt;&lt;b data-path-to-node=&quot;11&quot; data-index-in-node=&quot;0&quot;&gt;3. Nem Funkcionális Követelmények&lt;/b&gt;&lt;/p&gt;&lt;ul data-path-to-node=&quot;12&quot;&gt;&lt;li&gt;&lt;p data-path-to-node=&quot;12,0,0&quot;&gt;&lt;b data-path-to-node=&quot;12,0,0&quot; data-index-in-node=&quot;0&quot;&gt;Infrastruktúra:&lt;/b&gt; A megoldásnak futtathatónak kell lennie egy ingyenes vagy Pro szintű Google Colab környezetben (Nvidia T4 vagy L4 GPU-n).&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p data-path-to-node=&quot;12,1,0&quot;&gt;&lt;b data-path-to-node=&quot;12,1,0&quot; data-index-in-node=&quot;0&quot;&gt;Teljesítmény (Tanítás):&lt;/b&gt; 100 kép esetén a modell finomhangolása nem tarthat tovább 2-3 óránál.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p data-path-to-node=&quot;12,2,0&quot;&gt;&lt;b data-path-to-node=&quot;12,2,0&quot; data-index-in-node=&quot;0&quot;&gt;Teljesítmény (Generálás):&lt;/b&gt; Egyetlen szintetikus kép generálási ideje nem haladhatja meg a 15-20 másodpercet.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p data-path-to-node=&quot;12,3,0&quot;&gt;&lt;b data-path-to-node=&quot;12,3,0&quot; data-index-in-node=&quot;0&quot;&gt;Adatvédelem és Etika:&lt;/b&gt; A betanító adatbázisban (dataset) szereplő képeket a tanítás előtt anonimizálni kell (minden betegazonosító eltávolítása). Mivel a generált képek szintetikusak, önmagukban nem esnek a GDPR hatálya alá.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p data-path-to-node=&quot;12,4,0&quot;&gt;&lt;b data-path-to-node=&quot;12,4,0&quot; data-index-in-node=&quot;0&quot;&gt;Szakmai korlátozás:&lt;/b&gt; A generált képeken fel kell tüntetni (vagy a metaadatokban rögzíteni), hogy &quot;AI által generált szintetikus kép, orvosi diagnosztikára nem alkalmas&quot;.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p data-path-to-node=&quot;13&quot;&gt;&lt;b data-path-to-node=&quot;13&quot; data-index-in-node=&quot;0&quot;&gt;4. Adatkövetelmények (Dataset)&lt;/b&gt;&lt;/p&gt;&lt;ul data-path-to-node=&quot;14&quot;&gt;&lt;li&gt;&lt;p data-path-to-node=&quot;14,0,0&quot;&gt;&lt;b data-path-to-node=&quot;14,0,0&quot; data-index-in-node=&quot;0&quot;&gt;Mennyiség:&lt;/b&gt; Minimum 50, ideálisan 100-200 db azonos típusú és modalitású kép (pl. &lt;i data-path-to-node=&quot;14,0,0&quot; data-index-in-node=&quot;81&quot;&gt;csak&lt;/i&gt; mellkas CT-k, vagy &lt;i data-path-to-node=&quot;14,0,0&quot; data-index-in-node=&quot;105&quot;&gt;csak&lt;/i&gt; H&amp;amp;E festésű biopsziák). A stílusok keverése rontja a modellt.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p data-path-to-node=&quot;14,1,0&quot;&gt;&lt;b data-path-to-node=&quot;14,1,0&quot; data-index-in-node=&quot;0&quot;&gt;Minőség és Formátum:&lt;/b&gt; A képek lehetőleg 512x512 vagy 1024x1024 pixeles felbontású &lt;code data-path-to-node=&quot;14,1,0&quot; data-index-in-node=&quot;81&quot;&gt;.png&lt;/code&gt; vagy &lt;code data-path-to-node=&quot;14,1,0&quot; data-index-in-node=&quot;91&quot;&gt;.jpg&lt;/code&gt; fájlok legyenek, vízjelek és szöveges orvosi feliratok nélkül.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p data-path-to-node=&quot;14,2,0&quot;&gt;&lt;b data-path-to-node=&quot;14,2,0&quot; data-index-in-node=&quot;0&quot;&gt;Címkézés (Captioning):&lt;/b&gt; Minden képhez tartoznia kell egy pontosan ugyanazzal a névvel rendelkező &lt;code data-path-to-node=&quot;14,2,0&quot; data-index-in-node=&quot;96&quot;&gt;.txt&lt;/code&gt; fájlnak, amely leírja a kép tartalmát orvosi és vizuális kulcsszavakkal (pl. &lt;i data-path-to-node=&quot;14,2,0&quot; data-index-in-node=&quot;178&quot;&gt;kep_001.png&lt;/i&gt; -&amp;gt; &lt;i data-path-to-node=&quot;14,2,0&quot; data-index-in-node=&quot;193&quot;&gt;kep_001.txt&lt;/i&gt;).&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="650" width="823" x="760" y="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
